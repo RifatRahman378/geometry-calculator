@@ -15,7 +15,7 @@
 </header>
 <main class="flex flex-col md:flex-col lg:flex-col xl:flex-col 2xl:flex-row justify-around">
     <section>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3  ">
             <div class="card w-96 bg-base-100 shadow-xl m-3 mx-auto">
                 <figure class="px-10 pt-10">
                   <img src="images/triangle.png" alt="Shoes" class="rounded-xl" />
@@ -24,13 +24,13 @@
                   <h2 class="card-title">Triangle</h2>
                   <p>Area (A) = 0.5 b h</p>
                  <div>
-                    <input class="w-24 mx-2" type="text" placeholder="b" >
+                    <input id="triangle-base" class="w-24 mx-2" type="text" placeholder="b" >
                     <span>cm</span>
-                    <input class="w-24 mx-2" type="text" placeholder="h">
+                    <input id="triangle-height" class="w-24 mx-2" type="text" placeholder="h">
                     <span>cm</span>
                  </div>
                   <div class="card-actions mt-2">
-                    <button class="btn btn-primary w-80">Calculate</button>
+                    <button onclick="calculateTriangle()" class="btn btn-primary w-80">Calculate</button>
                   </div>
                 </div>
               </div>
@@ -137,6 +137,7 @@
 <footer>
 
 </footer>
+<script src="scripts/function.js"></script>
 </body>
 
 </html>
