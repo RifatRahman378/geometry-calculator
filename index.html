@@ -115,16 +115,16 @@
             <h2 class="card-title">Parallelogram</h2>
             <p>Area (A) = b x h</p>
             <div>
-              <input class="w-24 mx-2" type="text" placeholder="b">
+              <input id="parallelogram-base" class="w-24 mx-2" type="text" placeholder="b">
               <span>cm</span>
-              <input class="w-24 mx-2" type="text" placeholder="h">
+              <input id="parallelogram-height" class="w-24 mx-2" type="text" placeholder="h">
               <span>cm</span>
             </div>
             <div>
-              <p class="text-xl font-bold">Total area of Triangle is : <span id="triangle-id"></span></p>
+              <p class="text-xl font-bold">Total area of Parallelogram is : <span id="parallelogram-id"></span></p>
             </div>
             <div class="card-actions mt-2">
-              <button class="btn btn-primary w-80">Calculate</button>
+              <button onclick="calculateParallelogram()" class="btn btn-primary w-80">Calculate</button>
             </div>
           </div>
         </div>
@@ -138,16 +138,16 @@
             <p>Area (A) =
               0.5 x d<sub>1 </sub>x d<sub>2</sub></p>
             <div>
-              <input class="w-24 mx-2" type="text" placeholder="d₁">
+              <input id="rhombus-base" class="w-24 mx-2" type="text" placeholder="d₁">
               <span>cm</span>
-              <input class="w-24 mx-2" type="text" placeholder="d₂">
+              <input id="rhombus-height" class="w-24 mx-2" type="text" placeholder="d₂">
               <span>cm</span>
             </div>
             <div>
-              <p class="text-xl font-bold">Total area of Triangle is : <span id="triangle-id"></span></p>
+              <p class="text-xl font-bold">Total area of Rhombus is : <span id="rhombus-id"></span></p>
             </div>
             <div class="card-actions mt-2">
-              <button class="btn btn-primary w-80">Calculate</button>
+              <button onclick="calculateRhombus()" class="btn btn-primary w-80">Calculate</button>
             </div>
           </div>
         </div>
@@ -158,18 +158,18 @@
           </figure>
           <div class="card-body items-center text-center">
             <h2 class="card-title">Pentagon</h2>
-            <p>Area (A) =0.5 x p x b</p>
+            <p>Area (A) = 0.5 x p x b</p>
             <div>
-              <input class="w-24 mx-2" type="text" placeholder="p">
+              <input id="pentagon-base" class="w-24 mx-2" type="text" placeholder="p">
               <span>cm</span>
-              <input class="w-24 mx-2" type="text" placeholder="b">
+              <input id="pentagon-height" class="w-24 mx-2" type="text" placeholder="b">
               <span>cm</span>
             </div>
             <div>
-              <p class="text-xl font-bold">Total area of Triangle is : <span id="triangle-id"></span></p>
+              <p class="text-xl font-bold">Total area of Pentagon is : <span id="pentagon-id"></span></p>
             </div>
             <div class="card-actions mt-2">
-              <button class="btn btn-primary w-80">Calculate</button>
+              <button onclick="calculatePentagon()" class="btn btn-primary w-80">Calculate</button>
             </div>
           </div>
         </div>
@@ -182,16 +182,16 @@
             <h2 class="card-title">Ellipse</h2>
             <p>Area (A) = π x a x b</p>
             <div>
-              <input class="w-24 mx-2" type="text" placeholder="a">
+              <input id="ellipse-base" class="w-24 mx-2" type="text" placeholder="a">
               <span>cm</span>
-              <input class="w-24 mx-2" type="text" placeholder="b">
+              <input id="ellipse-height" class="w-24 mx-2" type="text" placeholder="b">
               <span>cm</span>
             </div>
             <div>
-              <p class="text-xl font-bold">Total area of Triangle is : <span id="ellipse-id"></span></p>
+              <p class="text-xl font-bold">Total area of Ellipse is : <span id="ellipse-id"></span></p>
             </div>
             <div class="card-actions mt-2">
-              <button class="btn btn-primary w-80">Calculate</button>
+              <button onclick="calculateEllipse()" class="btn btn-primary w-80">Calculate</button>
             </div>
           </div>
         </div>
