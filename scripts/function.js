@@ -4,7 +4,12 @@ function calculateTriangle() {
     const area = '' + (base * height * 0.5);
     setInnerText('triangle-id', area)
 }
-
+function calculateRectangle() {
+    const base = inputValueById('rectangle-base');
+    const height = inputValueById('rectangle-height')
+    const area = '' + (base * height * 0.5);
+    setInnerText('rectangle-id', area)
+}
 
 // function to get input
 function inputValueById(inputValue) {
