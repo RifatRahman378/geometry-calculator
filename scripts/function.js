@@ -5,11 +5,16 @@ function calculateTriangle() {
     const height = inputValueById('triangle-height');
     
     // Calculate the area of the triangle
-    const area = base * height * 0.5;
+  const isValid = numberCheck('triangle-id', base, height);
     
-    // Set the calculated area as inner text of the specified element
-    setInnerText('triangle-id', area);
+   // If both inputs are valid, calculate and display the area
+   if (isValid) {
+       const area = (base * height) / 2;
+       setInnerText('triangle-id', area);
+   }
 }
+
+
 
 // Function to calculate the area of a rectangle
 function calculateRectangle() {
@@ -18,10 +23,15 @@ function calculateRectangle() {
     const height = inputValueById('rectangle-height');
     
     // Calculate the area of the rectangle
-    const area = base * height;
+    const isValid = numberCheck('rectangle-id', base, height);
+    if (isValid) {
+        const area = base * height;
+        setInnerText('rectangle-id', area);
+    }
+    
     
     // Set the calculated area as inner text of the specified element
-    setInnerText('rectangle-id', area);
+   
 }
 
 // Function to calculate the area of a parallelogram
@@ -30,11 +40,11 @@ function calculateParallelogram() {
     const base = inputValueById('parallelogram-base');
     const height = inputValueById('parallelogram-height');
     
-    // Calculate the area of the parallelogram
-    const area = base * height;
-    
-    // Set the calculated area as inner text of the specified element
-    setInnerText('parallelogram-id', area);
+    const isValid = numberCheck('parallelogram-id', base, height);
+    if (isValid) {
+        const area = base * height;
+        setInnerText('parallelogram-id', area);
+    }
 }
 
 // Function to calculate the area of a rhombus
@@ -44,10 +54,14 @@ function calculateRhombus() {
     const height = inputValueById('rhombus-height');
     
     // Calculate the area of the rhombus
-    const area = base * height * 0.5;
-    
+   
+    const isValid = numberCheck('rhombus-id', base, height);
+    if (isValid) {
+        const area = base * height * 0.5;
+        setInnerText('rhombus-id', area);
+    }
     // Set the calculated area as inner text of the specified element
-    setInnerText('rhombus-id', area);
+   
 }
 
 // Function to calculate the area of a pentagon
@@ -57,10 +71,14 @@ function calculatePentagon() {
     const height = inputValueById('pentagon-height');
     
     // Calculate the area of the pentagon
-    const area = base * height * 0.5;
     
+    const isValid = numberCheck('pentagon-id', base, height);
+    if (isValid) {
+        const area = base * height * 0.5;
+        setInnerText('pentagon-id', area);
+    }
     // Set the calculated area as inner text of the specified element
-    setInnerText('pentagon-id', area);
+    
 }
 
 // Function to calculate the area of an ellipse
@@ -70,12 +88,26 @@ function calculateEllipse() {
     const height = inputValueById('ellipse-height');
     
     // Calculate the area of the ellipse
-    const area = base * height * 3.1415;
     
+    const isValid = numberCheck('ellipse-id', base, height);
+    if (isValid) {
+        const area = base * height * 3.1415;
+        setInnerText('ellipse-id', area);
+    }
     // Set the calculated area as inner text of the specified element
-    setInnerText('ellipse-id', area);
 }
 
+function numberCheck(id ,base, height){
+    if (!isNaN(base) && !isNaN(height)) {
+        
+        return true;
+        // Set the calculated area as inner text of the specified element
+        
+    } else {
+        // If base or height is not a valid number, display an error
+        setInnerText(id, 'Invalid input');
+    }
+}
 // Function to get input value by ID and set it to 0
 function inputValueById(inputValue) {
     // Retrieve the value of the input element by ID
